@@ -5,7 +5,11 @@
   "repository": "https://github.com/BillRobitskeJr/fcc-calculator.git",
   "author": "Bill Robitske, Jr. <bill.robitske.jr@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "gulp"
+  },
   "devDependencies": {
+    "babel-loader": "^6.2.10",
     "babel-preset-latest": "^6.16.0",
     "del": "^2.2.2",
     "eslint": "^3.13.1",
@@ -15,7 +19,8 @@
     "eslint-plugin-react": "^6.9.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
-    "gulp-eslint": "^3.0.1"
+    "gulp-eslint": "^3.0.1",
+    "webpack-stream": "^3.2.0"
   },
   "babel": {
     "presets": [
@@ -26,6 +31,9 @@
     "extends": "airbnb",
     "plugins": [
       "import"
-    ]
+    ],
+    "env": {
+      "browser": true
+    }
   }
 }
