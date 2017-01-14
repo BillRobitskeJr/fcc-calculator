@@ -6,5 +6,90 @@
  * @license MIT
  */
 html, body {
+  font: 16pt normal sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.c-calculator {
+  display: inline-flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  width: calc(12rem + 8px);
+}
+.c-calculator * {
+  box-sizing: border-box;
+}
+.c-calculator__screen {
+  margin: 0.25rem;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  width: calc(11.5rem + 4px);
+  height: 2rem;
+  padding: 0.5rem;
+  text-align: right;
+}
+.c-calculator__digit-buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  margin: 0.25rem;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  width: calc(7.5rem + 2px);
+}
+.c-calculator__digit-buttons > *,
+.c-calculator__operator-buttons > * {
+  border: 1px solid black;
+  border-radius: 0.25rem;
+}
+.c-calculator__digit-button {
+  margin: 0.25rem;
+  width: 2rem;
+  height: 2rem;
+}
+.c-calculator__zero-button {
+  margin: 0.25rem;
+  width: 4.5rem;
+  height: 2rem;
+}
+.c-calculator__operator-buttons {
+  display: flex;
+  flex-direction: column;
+  margin: 0.25rem;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  width: calc(3.5rem + 2px);
+}
+.c-calculator__operator-button {
+  margin: 0.125rem 0.25rem;
+  width: 3rem;
+  height: calc(6.25rem / 4);
+}
+.c-calculator__operator-button:first-child {
+  margin-top: 0.25rem;
+}
+.c-calculator__operator-button:nth-child(4) {
+  margin-bottom: 0.25rem;
+}
+.c-calculator__equals-button {
+  margin: 0.25rem;
+  width: 3rem;
+  height: 2rem;
+}
 
+.c-footer {
+  font-size: 12pt;
+  margin: auto 0 0 0;
+  border-top: 1px solid black;
+  width: 90vw;
+  text-align: center;
 }
