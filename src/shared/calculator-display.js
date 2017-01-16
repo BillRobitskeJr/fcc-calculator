@@ -11,6 +11,7 @@ export default class {
 
   static addDigitToValue(curValue, digit) {
     if (digit === '.' && curValue.indexOf(digit) !== -1) return curValue;
+    if (curValue === '0' && digit !== '.') return digit;
     return curValue + digit;
   }
 }

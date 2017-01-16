@@ -21,4 +21,10 @@ window.addEventListener('load', () => {
       screen.textContent = Display.addDigitToValue(screen.textContent, event.target.textContent);
     });
   });
+  window.addEventListener('keypress', (event) => {
+    if (event.keyCode !== 46 && (event.keyCode < 48 || event.keyCode > 57)) return;
+    const screen = document.querySelector(selectors.screen);
+    screen.textContent = Display.addDigitToValue(screen.textContent,
+      String.fromCharCode(event.keyCode));
+  });
 });

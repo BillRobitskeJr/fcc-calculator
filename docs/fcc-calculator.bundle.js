@@ -72,6 +72,11 @@
 	      screen.textContent = _calculatorDisplay2.default.addDigitToValue(screen.textContent, event.target.textContent);
 	    });
 	  });
+	  window.addEventListener('keypress', function (event) {
+	    if (event.keyCode !== 46 && (event.keyCode < 48 || event.keyCode > 57)) return;
+	    var screen = document.querySelector(selectors.screen);
+	    screen.textContent = _calculatorDisplay2.default.addDigitToValue(screen.textContent, String.fromCharCode(event.keyCode));
+	  });
 	});
 
 /***/ },
@@ -106,6 +111,7 @@
 	    key: 'addDigitToValue',
 	    value: function addDigitToValue(curValue, digit) {
 	      if (digit === '.' && curValue.indexOf(digit) !== -1) return curValue;
+	      if (curValue === '0' && digit !== '.') return digit;
 	      return curValue + digit;
 	    }
 	  }]);
